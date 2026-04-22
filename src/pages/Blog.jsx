@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FiArrowLeft, FiX } from 'react-icons/fi';
 import Spline from '@splinetool/react-spline';
 import './Blog.css';
 
@@ -351,9 +350,9 @@ Creating exceptional user experiences requires a deep understanding of users, th
         </div>
       </div>
 
-      {/* Top Center - owaif-portfolio */}
+      {/* Top Center - danish-portfolio */}
       <div className="top-center">
-        <p>owaif-portfolio</p>
+        <p>danish-portfolio</p>
       </div>
 
       {/* Right Menu - About, Blog, LinkedIn */}
@@ -375,7 +374,7 @@ Creating exceptional user experiences requires a deep understanding of users, th
           </li>
           <li
             className="clickable"
-            onClick={() => window.open('https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME', '_blank', 'noopener,noreferrer')}
+            onClick={() => window.open('https://www.linkedin.com/in/danish-butt-b41090369/', '_blank', 'noopener,noreferrer')}
             style={{ pointerEvents: 'auto', cursor: 'pointer' }}
           >
             LinkedIn

@@ -9,14 +9,16 @@ export default function About() {
 
   const aboutContent = {
     excerpt: [
-      "Hi, I'm Owaif Aamir, a passionate Front-end Engineer based in Pakistan. I specialize in creating beautiful, interactive, and user-friendly web experiences using modern technologies and best practices.",
-      "With a strong foundation in React, JavaScript, and modern web development tools, I love crafting digital experiences that not only look great but also provide seamless user interactions. My approach combines technical expertise with creative problem-solving to deliver exceptional results."
+      "I am Danish Butt, a Computer Science student at Air University Multan and a dedicated Full Stack Web Developer from Multan, Punjab, Pakistan.",
+      "I specialize in the MERN stack and focus on turning client requirements and UI designs into pixel-perfect, fully functional web applications with smooth user experiences."
     ],
     fullContent: [
-      "Hi, I'm Owaif Aamir, a passionate Front-end Engineer based in Pakistan. I specialize in creating beautiful, interactive, and user-friendly web experiences using modern technologies and best practices.",
-      "With a strong foundation in React, JavaScript, and modern web development tools, I love crafting digital experiences that not only look great but also provide seamless user interactions. My approach combines technical expertise with creative problem-solving to deliver exceptional results.",
-      "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community. I believe in continuous learning and staying up-to-date with the latest trends in web development.",
-      "I'm always excited to take on new challenges and collaborate on interesting projects. If you'd like to work together or just want to say hello, feel free to reach out!"
+      "I am Danish Butt, a dedicated Full Stack Web Developer with a strong focus on the MERN stack (React.js, Node.js, MongoDB).",
+      "I specialize in translating client requirements and UI designs into pixel-perfect, fully functional web solutions, from backend architecture to dynamic frontend interfaces.",
+      "At Work Edge LTD (December 2025 to Present), I work as a Full Stack Web Developer, building and hosting full stack web applications and delivering designs exactly as clients envision.",
+      "At ITSOLERA PVT LTD (January 2026 to March 2026), I built three major web applications, including two industry-level projects deployed on Vercel.",
+      "At Air University Multan (June 2025 to September 2025), I worked as a .NET backend developer on an internship management system.",
+      "Education: Bachelor of Computer Science at Air University Multan (2023 to 2027), and Engineering studies at Punjab Group Of Colleges (2020 to 2022)."
     ]
   };
 
@@ -52,9 +54,9 @@ export default function About() {
         </div>
       </div>
 
-      {/* Top Center - owaif-portfolio */}
+      {/* Top Center - danish-portfolio */}
       <div className="top-center">
-        <p>owaif-portfolio</p>
+        <p>danish-portfolio</p>
       </div>
 
       {/* Right Menu - About, Blog, LinkedIn */}
@@ -76,7 +78,7 @@ export default function About() {
           </li>
           <li
             className="clickable"
-            onClick={() => window.open('https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME', '_blank', 'noopener,noreferrer')}
+            onClick={() => window.open('https://www.linkedin.com/in/danish-butt-b41090369/', '_blank', 'noopener,noreferrer')}
             style={{ pointerEvents: 'auto', cursor: 'pointer' }}
           >
             LinkedIn

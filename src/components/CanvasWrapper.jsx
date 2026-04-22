@@ -1,6 +1,5 @@
 // src/components/CanvasWrapper.jsx
 import { Canvas } from '@react-three/fiber';
-import { Environment } from '@react-three/drei';
 import ModelFBX from './ModelFBX';
 
 export default function CanvasWrapper({ onAvatarLoaded }) {

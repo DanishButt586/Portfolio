@@ -1,10 +1,9 @@
 // src/App.js
 import './App.css';
 import { useState, useEffect } from 'react';
-import CanvasWrapper from './components/CanvasWrapper';
 import OverlayText from './ui/OverlayText';
 import CommandMenu from './ui/CommandMenu';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Blog from './pages/Blog';
 import About from './pages/About';
 import Loader from './components/Loader';
@@ -42,7 +41,6 @@ function App() {
           path="/"
           element={
             <div className="App">
-              <CanvasWrapper />
               {showLoader && <Loader onFinish={() => {
                 setShowLoader(false);
                 setShowOverlayText(true);

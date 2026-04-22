@@ -1,14 +1,14 @@
 // src/ui/CommandMenu.jsx
 import './CommandMenu.css';
 import React, { useState } from 'react';
-import { FiCopy, FiDownload, FiUser, FiMail, FiInstagram, FiLinkedin } from 'react-icons/fi'; // Feather icons
+import { FiCopy, FiDownload, FiMail, FiLinkedin, FiGithub } from 'react-icons/fi';
 
 const menuItems = [
   { label: 'Copy link', icon: <FiCopy />, action: () => navigator.clipboard.writeText(window.location.href) },
-  { label: 'Download CV', icon: <FiDownload />, action: () => window.open('/CV/My%20CV%20Resume.pdf', '_blank') },
-  { label: 'Know my career', icon: <FiLinkedin />, action: () => window.open('https://www.linkedin.com/in/owaif-aamir-124147372/', '_blank') },
-  { label: 'Send an email', icon: <FiMail />, action: () => window.open('mailto:owaifir005@gmail.com') },
-  { label: 'Follow me on Instagram', icon: <FiInstagram />, action: () => window.open('https://www.instagram.com/owaif__rajpoot__/', '_blank') }
+  { label: 'Download CV', icon: <FiDownload />, action: () => window.open('/CV/WebCv.pdf', '_blank') },
+  { label: 'Know my career', icon: <FiLinkedin />, action: () => window.open('https://www.linkedin.com/in/danish-butt-b41090369/', '_blank') },
+  { label: 'View GitHub', icon: <FiGithub />, action: () => window.open('https://github.com/DanishButt586', '_blank') },
+  { label: 'Send an email', icon: <FiMail />, action: () => window.open('mailto:danishnaveed212@gmail.com') }
 ];
 
 export default function CommandMenu({ isOpen, onClose }) {

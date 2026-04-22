@@ -3,6 +3,7 @@ import './MobileWarning.css';
 
 const MobileWarning = () => {
   const [copied, setCopied] = useState(false);
+  const currentUrl = window.location.href;
   
   const isMobile = () => {
     return window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -14,13 +15,13 @@ const MobileWarning = () => {
 
   const handleCopyUrl = async () => {
     try {
-      await navigator.clipboard.writeText('https://portfolio-website-rho-nine-26.vercel.app/');
+      await navigator.clipboard.writeText(currentUrl);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       // Fallback for older browsers
       const textArea = document.createElement('textarea');
-      textArea.value = 'https://portfolio-website-rho-nine-26.vercel.app/';
+      textArea.value = currentUrl;
       document.body.appendChild(textArea);
       textArea.select();
       document.execCommand('copy');

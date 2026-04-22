@@ -3,7 +3,7 @@
 .about-page {
   width: 100vw;
   height: 100vh;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   margin: 0;
   padding: 0;
   position: relative;
@@ -215,11 +215,11 @@
 
 .back-text {
   font-size: 16px;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   transition: text-decoration 0.3s ease;
 }
 
-/* Top Center - owaif-portfolio.com */
+/* Top Center - danish-portfolio */
 .top-center {
   position: absolute;
   top: 20px;
@@ -233,7 +233,7 @@
 .top-center p {
   margin: 0;
   color: inherit;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
 }
 
 /* Right Menu - About, Blog, LinkedIn */
@@ -257,7 +257,7 @@
   cursor: pointer;
   text-decoration: underline;
   color: white;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
 }
 
 .clickable {
@@ -269,21 +269,21 @@
   .about-content {
     padding: 80px 20px 20px 20px;
   }
-  
+
   .about-title {
     font-size: 2rem;
   }
-  
+
   .popup-content {
     width: 95%;
     max-height: 90vh;
   }
-  
+
   .popup-title {
     font-size: 1.5rem;
     margin: 20px 20px 15px 20px;
   }
-  
+
   .popup-body {
     padding: 0 20px 20px 20px;
   }
