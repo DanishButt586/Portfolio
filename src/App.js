@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Blog from './pages/Blog';
 import About from './pages/About';
 import Loader from './components/Loader';
-import MobileWarning from './components/MobileWarning';
 
 
 function App() {
@@ -35,7 +34,6 @@ function App() {
 
   return (
     <Router>
-      <MobileWarning />
       <Routes>
         <Route
           path="/"
@@ -45,7 +43,7 @@ function App() {
                 setShowLoader(false);
                 setShowOverlayText(true);
               }} />}
-              {showOverlayText && <OverlayText />}
+              {showOverlayText && <OverlayText onOpenMenu={() => setMenuOpen(true)} />}
               <CommandMenu isOpen={isMenuOpen} onClose={() => setMenuOpen(false)} />
             </div>
           }

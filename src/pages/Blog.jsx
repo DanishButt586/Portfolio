@@ -321,15 +321,33 @@ Creating exceptional user experiences requires a deep understanding of users, th
 
   return (
     <div className="blog-page">
-      <div>
+      <div className="blog-spline" aria-hidden="true">
         <Spline scene="https://prod.spline.design/SRsfuWctp8M5HnOR/scene.splinecode" />
       </div>
-      
-      {/* Back Arrow */}
-      <button className="back-arrow" onClick={() => navigate('/')}>
-        <span className="arrow-icon">←</span>
-        <span className="back-text">Back to Home</span>
-      </button>
+
+      <header className="blog-header">
+        <button className="blog-back" onClick={() => navigate('/')}>
+          <span className="arrow-icon">←</span>
+          <span className="back-text">Back to Home</span>
+        </button>
+
+        <p className="blog-brand">danish-portfolio</p>
+
+        <nav className="blog-nav" aria-label="Blog page links">
+          <button type="button" onClick={() => navigate('/about')}>
+            About
+          </button>
+          <button type="button" onClick={() => navigate('/blog')}>
+            Blog
+          </button>
+          <button
+            type="button"
+            onClick={() => window.open('https://www.linkedin.com/in/danish-butt-b41090369/', '_blank', 'noopener,noreferrer')}
+          >
+            LinkedIn
+          </button>
+        </nav>
+      </header>
 
       {/* Blog Content */}
       <div className="blog-content">
@@ -348,38 +366,6 @@ Creating exceptional user experiences requires a deep understanding of users, th
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Top Center - danish-portfolio */}
-      <div className="top-center">
-        <p>danish-portfolio</p>
-      </div>
-
-      {/* Right Menu - About, Blog, LinkedIn */}
-      <div className="right-menu">
-        <ul>
-          <li
-            className="clickable"
-            onClick={() => navigate('/about')}
-            style={{ pointerEvents: 'auto', cursor: 'pointer' }}
-          >
-            About
-          </li>
-          <li
-            className="clickable"
-            onClick={() => navigate('/blog')}
-            style={{ pointerEvents: 'auto', cursor: 'pointer' }}
-          >
-            Blog
-          </li>
-          <li
-            className="clickable"
-            onClick={() => window.open('https://www.linkedin.com/in/danish-butt-b41090369/', '_blank', 'noopener,noreferrer')}
-            style={{ pointerEvents: 'auto', cursor: 'pointer' }}
-          >
-            LinkedIn
-          </li>
-        </ul>
       </div>
 
       {/* Popup for blog posts */}

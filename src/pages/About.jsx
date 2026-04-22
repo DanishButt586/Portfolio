@@ -24,66 +24,50 @@ export default function About() {
 
   return (
     <div className="about-page">
-      {/* Spline Animation Background */}
-      <div className="spline-container">
-        <Spline
-          scene="https://prod.spline.design/qK5Aba3x2UOqeksF/scene.splinecode" 
-        />
-      </div>
-      
-      {/* Back Arrow */}
-      <button className="back-arrow" onClick={() => navigate('/')}>
-        <span className="arrow-icon">←</span>
-        <span className="back-text">Back to Home</span>
-      </button>
+      <header className="about-header">
+        <button className="about-back" onClick={() => navigate('/')}>
+          <span className="arrow-icon">←</span>
+          <span className="back-text">Back to Home</span>
+        </button>
 
-      {/* About Content */}
-      <div className="about-content">
-        <h1 className="about-title">About Me</h1>
-        
-        <div className="about-description">
-          {aboutContent.excerpt.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
-          <button 
-            className="read-more-btn" 
-            onClick={() => setShowFullContent(true)}
-          >
-            Read More
-          </button>
-        </div>
-      </div>
+        <p className="about-brand">danish-portfolio</p>
 
-      {/* Top Center - danish-portfolio */}
-      <div className="top-center">
-        <p>danish-portfolio</p>
-      </div>
-
-      {/* Right Menu - About, Blog, LinkedIn */}
-      <div className="right-menu">
-        <ul>
-          <li
-            className="clickable"
-            onClick={() => navigate('/about')}
-            style={{ pointerEvents: 'auto', cursor: 'pointer' }}
-          >
+        <nav className="about-nav" aria-label="About page links">
+          <button type="button" onClick={() => navigate('/about')}>
             About
-          </li>
-          <li
-            className="clickable"
-            onClick={() => navigate('/blog')}
-            style={{ pointerEvents: 'auto', cursor: 'pointer' }}
-          >
+          </button>
+          <button type="button" onClick={() => navigate('/blog')}>
             Blog
-          </li>
-          <li
-            className="clickable"
+          </button>
+          <button
+            type="button"
             onClick={() => window.open('https://www.linkedin.com/in/danish-butt-b41090369/', '_blank', 'noopener,noreferrer')}
-            style={{ pointerEvents: 'auto', cursor: 'pointer' }}
           >
             LinkedIn
-          </li>
-        </ul>
+          </button>
+        </nav>
+      </header>
+
+      <div className="about-layout">
+        <div className="spline-container" aria-hidden="true">
+          <Spline scene="https://prod.spline.design/qK5Aba3x2UOqeksF/scene.splinecode" />
+        </div>
+
+        <section className="about-content">
+          <h1 className="about-title">About Me</h1>
+
+          <div className="about-description">
+            {aboutContent.excerpt.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+            <button
+              className="read-more-btn"
+              onClick={() => setShowFullContent(true)}
+            >
+              Read More
+            </button>
+          </div>
+        </section>
       </div>
 
       {/* Popup for full about content */}

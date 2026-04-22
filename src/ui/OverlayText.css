@@ -12,7 +12,7 @@
   position: relative;
   min-height: 100vh;
   box-sizing: border-box;
-  padding: 28px 44px 34px;
+  padding: 28px clamp(16px, 4vw, 44px) 34px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -24,11 +24,7 @@
       rgba(79, 195, 247, 0.12),
       transparent 32%
     ),
-    radial-gradient(
-      circle at 8% 84%,
-      rgba(242, 106, 62, 0.1),
-      transparent 30%
-    ),
+    radial-gradient(circle at 8% 84%, rgba(242, 106, 62, 0.1), transparent 30%),
     #1a1a1a;
   overflow: hidden;
 }
@@ -146,6 +142,7 @@
   font-family: "Courier New", monospace;
   font-size: 13px;
   font-weight: 600;
+  min-height: 36px;
   transition:
     transform 0.25s ease,
     border-color 0.25s ease,
@@ -226,7 +223,9 @@
   padding: 12px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(6px);
-  transition: border-color 0.25s ease, background 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease;
 }
 
 .metric-card:hover {
@@ -346,7 +345,9 @@
   padding: 16px;
   box-shadow: 0 16px 34px rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(8px);
-  transition: border-color 0.25s ease, background 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease;
 }
 
 .highlight-card:hover {
@@ -426,15 +427,38 @@
 
 @media (max-width: 900px) {
   .home-hero {
-    padding: 24px 20px;
+    padding: 20px 16px 28px;
   }
 
   .hero-metrics {
     grid-template-columns: 1fr;
   }
+
+  .hero-side {
+    grid-template-rows: 1fr;
+  }
+
+  .hero-title span {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 620px) {
+  .hero-topbar {
+    padding: 10px;
+  }
+
+  .hero-nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-nav button {
+    width: 100%;
+    text-align: center;
+  }
+
   .hero-title {
     line-height: 1.02;
   }
@@ -450,5 +474,20 @@
 
   .hero-footer {
     flex-direction: column;
+    gap: 6px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .home-hero {
+    gap: 16px;
+  }
+
+  .hero-primary,
+  .hero-side-panel,
+  .highlight-card {
+    padding: 14px;
+    border-radius: 16px;
   }
 }

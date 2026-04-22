@@ -37,7 +37,7 @@ function openExternal(url) {
   window.open(url, '_blank', 'noopener,noreferrer');
 }
 
-export default function OverlayText() {
+export default function OverlayText({ onOpenMenu }) {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -62,6 +62,7 @@ export default function OverlayText() {
         </p>
 
         <nav className="hero-nav" aria-label="Primary">
+          <button type="button" onClick={onOpenMenu}>Actions</button>
           <button type="button" onClick={() => navigate('/about')}>About</button>
           <button type="button" onClick={() => navigate('/blog')}>Blog</button>
           <button
